@@ -2,9 +2,10 @@ import './TodoList.css'
 
 export default function TodoList(props){
     function renderRows(){
-        const list = props.list || []
-        return (list.map(todo =>{
-            <tr>
+        const list = props.List || []
+        console.log(list)
+        return (list.map((todo) =>{
+            <tr key={todo.id}>
                 <td>{todo.description}</td>
             </tr>
         }))
